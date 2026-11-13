@@ -19,17 +19,19 @@
       body { color: #eee; background: #121212; }
       a { color: #8ab4f8; }
       hr { border-color: #333; }
+      .meta, .note { color: #aaa; }
     }
     h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.25rem; margin-top: 2rem; }
     h3 { font-size: 1.05rem; margin-top: 1.25rem; }
-    .meta { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; }
-    @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+    .meta, .note { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; }
     .lang { direction: rtl; text-align: right; }
     .lang-en { direction: ltr; text-align: left; }
     ul { padding-inline-start: 1.4rem; }
     hr { margin: 2.5rem 0; border: none; border-top: 1px solid #ddd; }
     code { font-size: 0.9em; }
+    nav { margin-bottom: 1.5rem; }
+
   </style>
 </head>
 <body>
@@ -37,44 +39,70 @@
   <section class="lang" lang="ar">
     <h1>سياسة الخصوصية</h1>
     <p class="meta">تطبيق: <strong>Souq Libya Cars Poster</strong><br>
-    آخر تحديث: 9 نوفمبر 2026</p>
+    الصفحة: <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a><br>
+    آخر تحديث: 13 نوفمبر 2026</p>
+    <nav>
+      <a href="#data-deletion">طلب حذف البيانات</a> ·
+      <a href="data-deletion.html">صفحة تعليمات الحذف</a> ·
+      <a href="terms.html">شروط الاستخدام</a> ·
+      <a href="#en">English</a>
+    </nav>
 
     <p>
       يُستخدم تطبيق <strong>Souq Libya Cars Poster</strong> حصرياً من قِبل مسؤولي صفحة فيسبوك
       <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
-      لنشر إعلانات بيع السيارات على صفحتهم عبر واجهة Graph API.
+      لتشغيل الصفحة: نشر إعلانات بيع السيارات عبر واجهة Graph API، واستقبال والرد على رسائل العملاء في Messenger عبر واجهة الرسائل (Send API) والإشعارات الفورية (Webhooks).
     </p>
-
-    <h3>ما الذي يجمعه التطبيق؟</h3>
-    <ul>
-      <li>لا يجمع التطبيق أي بيانات شخصية من زوّار الصفحة أو من الجمهور.</li>
-      <li>لا يطلب تسجيل دخول من المستخدمين النهائيين، ولا يخزّن رسائل أو صور عملاء خارج الأدوات التي يستخدمها مسؤولو الصفحة.</li>
-      <li>يستخدم التطبيق رموز وصول (access tokens) خاصة بمسؤولي الصفحة فقط لنشر المنشورات وإدارتها على الصفحة المذكورة أعلاه.</li>
-    </ul>
-
-    <h3>كيف تُستخدم البيانات؟</h3>
     <p>
-      أي محتوى ينشره التطبيق (نصوص وصور إعلانات السيارات) يُنشَر علناً على صفحة فيسبوك التابعة للمسؤولين.
-      لا نبيع البيانات ولا نشاركها مع أطراف ثالثة لأغراض تسويقية.
+      التطبيق أداة داخلية لمسؤولي هذه الصفحة فقط. ليس منصة عامة، ولا يُقدَّم كخدمة لمالكي صفحات أخرى.
     </p>
 
-    <h3>الصلاحيات المستخدمة</h3>
+    <h2>ما الذي يجمعه التطبيق؟</h2>
+    <ul>
+      <li>محتوى إعلانات السيارات التي يطلب العميل نشرها (النص والصور ومواصفات السيارة).</li>
+      <li>رسائل Messenger الواردة إلى الصفحة: النص، والصور والفيديو والصوت والملفات، ومعرّف العميل الخاص بالصفحة (PSID)، والاسم والصورة الشخصية إن وفّرهما فيسبوك للتطبيق.</li>
+      <li>تفاصيل يتبرّع بها العميل لإتمام العرض: أرقام الهاتف، وموقع السيارة، وإثبات دفع رسم العرض (مثل صورة كرت أو رقم كرت شحن أو رسالة تحويل رصيد). هذه البيانات المالية لا تُنشر على الصفحة.</li>
+      <li>رموز وصول (access tokens) خاصة بمسؤولي الصفحة فقط لتشغيل النشر والرسائل.</li>
+    </ul>
+    <p>
+      لا يجمع التطبيق بيانات من زوّار الصفحة الذين لا يراسلون الصفحة ولا يطلبون عرض سيارة. لا نستخدم بيانات الرسائل للإعلان لجهات خارجية، ولا نبيع البيانات.
+    </p>
+
+    <h2>كيف تُستخدم البيانات؟</h2>
+    <ul>
+      <li>الرد على استفسارات العملاء ودعم تشغيل صندوق رسائل الصفحة.</li>
+      <li>تأكيد طلب عرض السيارة واستلام رسم العرض، ثم تجهيز الإعلان ونشره على الصفحة بناءً على طلب العميل.</li>
+      <li>التحقق من عدم تكرار استخدام نفس إثبات الدفع، وحفظ سجل تشغيلي للعروض المنشورة.</li>
+    </ul>
+    <p>
+      ما يُنشر علناً على الصفحة هو فقط نص الإعلان وصور السيارة التي طلب العميل عرضها. لا تُنشر رسائل الخاص ولا أرقام الكرت ولا رموز الوصول.
+    </p>
+
+    <h2>الصلاحيات المستخدمة</h2>
     <ul>
       <li><code>pages_show_list</code> — عرض الصفحات التي يديرها المسؤول.</li>
-      <li><code>pages_read_engagement</code> — قراءة تفاعل المنشورات على الصفحة.</li>
-      <li><code>pages_manage_posts</code> — إنشاء وتعديل وحذف منشورات الصفحة.</li>
+      <li><code>pages_read_engagement</code> — قراءة محتوى وتفاعل منشورات الصفحة، بما في ذلك التأكد من أن الإعلان نُشر بشكل علني.</li>
+      <li><code>pages_manage_posts</code> — إنشاء منشورات الصفحة (الإعلانات).</li>
+      <li><code>pages_manage_metadata</code> — الاشتراك في إشعارات Webhooks لنشاط الصفحة والرسائل.</li>
+      <li><code>pages_messaging</code> — قراءة رسائل العملاء والرد عليها عبر Messenger.</li>
     </ul>
 
-    <h3 id="data-deletion">طلب حذف البيانات</h3>
+    <h2>مدة الاحتفاظ</h2>
     <p>
-      بما أن التطبيق لا يخزّن بيانات شخصية لزوار أو مستخدمين نهائيين، فغالباً لا توجد بيانات شخصية لحذفها.
-      إذا رغبت في طلب حذف أي بيانات مرتبطة باستخدام التطبيق أو بمنشور نُشر عبره، فتواصل مع مسؤولي الصفحة عبر
-      <strong>Facebook Messenger</strong> على صفحة
-      <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
-      واطلب الحذف صراحةً. سنراجع الطلب ونرد خلال مدة معقولة (عادة خلال 7 أيام).
+      نحتفظ بنصوص الرسائل ومرفقات الصور اللازمة لتشغيل العرض ولدعم العميل طالما كان ذلك مطلوباً لهذا الغرض التشغيلي، أو إلى أن يصلنا طلب حذف صحيح. روابط صور Messenger المؤقتة تُحمَّل عند الاستلام لأن فيسبوك قد يوقفها لاحقاً. إثباتات الدفع تُستخدم لتأكيد الرسم ومنع التكرار، ولا تُشارك خارج فريق الصفحة.
     </p>
 
-    <h3>التواصل</h3>
+    <h2 id="data-deletion">طلب حذف البيانات</h2>
+    <p>
+      لطلب حذف بياناتك المرتبطة بالتطبيق أو بالرسائل أو بمنشور نُشر عبره، راسل مسؤولي الصفحة عبر
+      <strong>Facebook Messenger</strong> على
+      <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
+      واطلب الحذف صراحةً. يمكن أيضاً اتباع التعليمات المفصّلة في
+      <a href="data-deletion.html">صفحة حذف البيانات</a>.
+      سنراجع الطلب ونرد خلال مدة معقولة (عادة خلال 7 أيام). قد يبقى المنشور العلني الذي طلبتَ نشره ظاهراً إلى أن تطلب إزالته من الصفحة أيضاً.
+    </p>
+
+    <h2>التواصل</h2>
     <p>
       للاستفسارات المتعلقة بالخصوصية أو حذف البيانات: راسل الصفحة عبر Messenger على الرابط أعلاه.
     </p>
@@ -82,47 +110,72 @@
 
   <hr>
 
-  <section class="lang-en" lang="en">
+  <section class="lang-en" lang="en" id="en">
     <h1>Privacy Policy</h1>
     <p class="meta">App: <strong>Souq Libya Cars Poster</strong><br>
-    Last updated: 9 November 2026</p>
+    Page: <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a><br>
+    Last updated: 13 November 2026</p>
+    <nav>
+      <a href="#data-deletion-en">Data deletion</a> ·
+      <a href="data-deletion.html#en">Deletion instructions page</a> ·
+      <a href="terms.html#en">Terms of Service</a>
+    </nav>
 
     <p>
       The <strong>Souq Libya Cars Poster</strong> app is used exclusively by the administrators of the Facebook Page
       <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
-      to publish car-sale advertisements on their own Page via the Meta Graph API.
+      to operate that Page: publishing car-sale advertisements via the Meta Graph API, and receiving and answering customer messages in Messenger via the Send API and Webhooks.
     </p>
-
-    <h3>What data does the app collect?</h3>
-    <ul>
-      <li>The app does <strong>not</strong> collect personal data from Page visitors or the general public.</li>
-      <li>It does not offer end-user login and does not store customer messages or photos outside the tools used by Page admins.</li>
-      <li>The app uses Page/admin access tokens solely to create and manage posts on the Page named above.</li>
-    </ul>
-
-    <h3>How is data used?</h3>
     <p>
-      Content published through the app (ad text and car photos) is posted publicly on the admins’ Facebook Page.
-      We do not sell data or share it with third parties for marketing purposes.
+      The app is an internal tool for the administrators of this Page only. It is not a public platform and is not offered as a service to owners of other Pages.
     </p>
 
-    <h3>Permissions used</h3>
+    <h2>What data does the app collect?</h2>
+    <ul>
+      <li>Car-listing content the customer asks us to publish (ad text, photos, and vehicle specifications).</li>
+      <li>Messenger messages sent to the Page: text, photos, video, audio and files; the customer’s Page-scoped ID (PSID); and the name and profile picture if Facebook provides them to the app.</li>
+      <li>Details the customer volunteers to complete a listing: phone numbers, location, and proof of the listing fee (for example a card photo, a recharge-card number, or a balance-transfer confirmation). Payment proof is never published on the Page.</li>
+      <li>Page/admin access tokens used solely by Page administrators to publish and to send or receive messages.</li>
+    </ul>
+    <p>
+      The app does not collect data from Page visitors who do not message the Page or request a listing. We do not use message data to advertise for third parties, and we do not sell data.
+    </p>
+
+    <h2>How is data used?</h2>
+    <ul>
+      <li>To answer customer enquiries and operate the Page inbox.</li>
+      <li>To confirm a listing request and listing-fee payment, then prepare and publish the advertisement at the customer’s request.</li>
+      <li>To prevent reuse of the same payment proof and to keep an operational log of published listings.</li>
+    </ul>
+    <p>
+      Only the ad text and car photos the customer asked us to publish appear publicly on the Page. Private messages, card numbers, and access tokens are not published.
+    </p>
+
+    <h2>Permissions used</h2>
     <ul>
       <li><code>pages_show_list</code> — list Pages the admin manages.</li>
-      <li><code>pages_read_engagement</code> — read engagement on Page posts.</li>
-      <li><code>pages_manage_posts</code> — create, edit, and delete Page posts.</li>
+      <li><code>pages_read_engagement</code> — read Page post content and engagement, including confirming that a listing was published publicly.</li>
+      <li><code>pages_manage_posts</code> — create Page posts (listings).</li>
+      <li><code>pages_manage_metadata</code> — subscribe the Page to Webhooks for Page and messaging activity.</li>
+      <li><code>pages_messaging</code> — read and reply to customer conversations in Messenger.</li>
     </ul>
 
-    <h3 id="data-deletion-en">Data deletion requests</h3>
+    <h2>Retention</h2>
     <p>
-      Because this app does not store personal data about visitors or end users, there is typically no personal data to delete.
-      If you want any data related to the app’s use—or a post published through it—deleted, contact the Page admins via
-      <strong>Facebook Messenger</strong> on
-      <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
-      and clearly request deletion. We will review and respond within a reasonable time (usually within 7 days).
+      We keep message text and media needed to complete a listing and support the customer for as long as that operational purpose requires, or until a valid deletion request is received. Temporary Messenger media URLs are downloaded on receipt because Facebook may later expire them. Payment proof is used only to confirm the fee and prevent duplicates, and is not shared outside the Page team.
     </p>
 
-    <h3>Contact</h3>
+    <h2 id="data-deletion-en">Data deletion requests</h2>
+    <p>
+      To request deletion of your data related to the app, to messages, or to a post published through it, contact the Page admins via
+      <strong>Facebook Messenger</strong> on
+      <a href="https://www.facebook.com/open.sooq.libyan/" rel="noopener" target="_blank">سوق ليبيا المفتوح للسيارات فقط</a>
+      and clearly request deletion. You can also follow the detailed steps on the
+      <a href="data-deletion.html#en">data deletion instructions page</a>.
+      We will review and respond within a reasonable time (usually within 7 days). A public post that you asked us to publish may remain visible until you also ask for that post to be removed.
+    </p>
+
+    <h2>Contact</h2>
     <p>
       For privacy or deletion questions: message the Page on Messenger using the link above.
     </p>
